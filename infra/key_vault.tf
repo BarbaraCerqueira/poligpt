@@ -82,3 +82,12 @@ resource "azurerm_key_vault_secret" "chat_function_key" {
 
   depends_on = [azurerm_key_vault_access_policy.admin]
 }
+
+# Chave somente leitura do AI Search, usada pela Function do chat (a chave admin fica só para os scripts de setup).
+resource "azurerm_key_vault_secret" "search_query_key" {
+  name         = "azure-search-query-key"
+  key_vault_id = azurerm_key_vault.main.id
+  value        = azurerm_search_service.main.query_keys[0].key
+
+  depends_on = [azurerm_key_vault_access_policy.admin]
+}

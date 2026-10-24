@@ -3,7 +3,7 @@ import { useChat } from '../hooks/useChat';
 import ChatMessage from './ChatMessage';
 
 const ChatMessages: React.FC = () => {
-  const { currentChat, isLoading } = useChat();
+  const { currentChat } = useChat();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messages = useMemo(() => currentChat?.messages || [], [currentChat?.messages]);
 
@@ -23,15 +23,6 @@ const ChatMessages: React.FC = () => {
           {messages.map((message, index) => (
             <ChatMessage key={index} message={message} />
           ))}
-          {isLoading && (
-            <div className="flex items-center justify-center py-2">
-              <div className="animate-pulse flex space-x-2">
-                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
-                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
-                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
-              </div>
-            </div>
-          )}
           <div ref={messagesEndRef} />
         </div>
       </div>

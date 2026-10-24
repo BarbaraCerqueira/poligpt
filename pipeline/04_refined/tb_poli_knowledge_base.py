@@ -79,14 +79,14 @@ df_html = (
     # Desconsiderar home page - Não contém informações úteis completas
     .filter(col("url") != "https://poli.ufrj.br/")
 
-    # Para páginas de eventos e notícias, manter apenas os publicados há no máximo 1 ano 
+    # Para páginas de eventos e notícias, manter apenas os publicados há no máximo 2 anos 
     .filter(
         ~(col("file_path").contains("poli_ufrj_br_noticia")) | 
-        ((col("file_path").contains("poli_ufrj_br_noticia")) & (col("last_modified") > add_months(current_date(), -12)))
+        ((col("file_path").contains("poli_ufrj_br_noticia")) & (col("last_modified") > add_months(current_date(), -24)))
     )
     .filter(
         ~(col("file_path").contains("poli_ufrj_br_evento")) | 
-        ((col("file_path").contains("poli_ufrj_br_evento")) & (col("last_modified") > add_months(current_date(), -12)))
+        ((col("file_path").contains("poli_ufrj_br_evento")) & (col("last_modified") > add_months(current_date(), -24)))
     )
 
     # Filtrar páginas de cronograma de concurso para docentes
