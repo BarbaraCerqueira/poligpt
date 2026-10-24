@@ -1,0 +1,2 @@
+# Scripts executados em Linux (init scripts do Databricks) precisam de quebras de linha LF, mesmo com core.autocrlf=true no Windows
+*.sh text eol=lf
