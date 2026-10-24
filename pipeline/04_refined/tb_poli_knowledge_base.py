@@ -95,7 +95,7 @@ df_html = (
     # Ajustes estruturais
     .withColumn("last_modified", col("last_modified").cast("date"))
     .withColumn("document_id", md5(col("file_path")))
-    .drop("description", "url")
+    .drop("description")
 )
 
 # COMMAND ----------
@@ -150,6 +150,7 @@ df_tb_poli_knowledge_base = (
     # Seleção das colunas que serão relevantes para indexar a base de conhecimento 
     .select(
         col("document_id").cast("string").alias("sk_document"),
+        col("url").cast("string").alias("ds_url"),
         col("keywords").cast("string").alias("ds_keywords"),
         col("title").cast("string").alias("ds_title_document"),
         col("last_modified").cast("date").alias("dt_last_modified"),
