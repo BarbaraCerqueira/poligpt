@@ -166,8 +166,6 @@ df_tb_poli_knowledge_base = (
 # COMMAND ----------
 
 upsert_to_delta_lake(df=df_tb_poli_knowledge_base, delta_table_path=output_path, key_column=output_key)
-save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_html, target_path=output_path)
-save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_pdf, target_path=output_path)
 
 # COMMAND ----------
 
@@ -181,3 +179,9 @@ upsert_to_sql_with_retry(
     df=df_tb_poli_knowledge_base, schema_name=schema_name, table_name=table_name, key=output_key, 
     db_username=sql_login, db_password=sql_password, db_database=sql_database, db_hostname=sql_hostname
 )
+
+# COMMAND ----------
+
+# Checkpoint salvo só após as duas cargas: se a carga no SQL falhar, a próxima execução reprocessa os mesmos dados
+save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_html, target_path=output_path)
+save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_pdf, target_path=output_path)

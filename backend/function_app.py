@@ -1,11 +1,12 @@
 import re
 import json
+import time
 import logging
 
 import azure.functions as func
 from azurefunctions.extensions.http.fastapi import Request, StreamingResponse, JSONResponse
 
-from agent import create_poligpt_agent
+from agent import create_poligpt_agent, logger
 
 # ====================== CONFIGURAÇÕES DO APP ======================
 
@@ -82,6 +83,8 @@ async def stream_answer(messages: list):
     """
     sources = {}
     answer = ""
+    searches = 0
+    start = time.time()
     try:
         agent = create_poligpt_agent(sources)
         async for chunk, metadata in agent.astream({"messages": messages}, stream_mode="messages"):
@@ -89,16 +92,18 @@ async def stream_answer(messages: list):
                 continue
             if any(tool_call.get("name") for tool_call in getattr(chunk, "tool_call_chunks", [])):
                 answer = ""
+                searches += 1
                 yield sse_event({"type": "status", "status": "searching"})
             elif chunk.text:
                 answer += chunk.text
                 yield sse_event({"type": "token", "content": chunk.text})
 
+        logger.info("Resposta gerada em %.1fs com %d busca(s)", time.time() - start, searches)
         yield sse_event({"type": "sources", "sources": cited_sources(answer, sources)})
         yield sse_event({"type": "done"})
     except Exception:
         # O detalhe do erro vai só para o log (Application Insights), não para o cliente
-        logging.exception("Erro ao gerar a resposta do chat")
+        logger.exception("Erro ao gerar a resposta do chat")
         yield sse_event({"type": "error", "message": "Erro interno ao gerar a resposta."})
 
 
@@ -130,5 +135,5 @@ async def chat_completion(req: Request):
     try:
         return JSONResponse(await generate_answer(messages))
     except Exception:
-        logging.exception("Erro ao gerar a resposta do chat")
+        logger.exception("Erro ao gerar a resposta do chat")
         return error_response("Erro interno ao gerar a resposta.", 500)
