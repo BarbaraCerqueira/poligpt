@@ -79,14 +79,14 @@ df_html = (
     # Desconsiderar home page - Não contém informações úteis completas
     .filter(col("url") != "https://poli.ufrj.br/")
 
-    # Para páginas de eventos e notícias, manter apenas os publicados há no máximo 1 ano 
+    # Para páginas de eventos e notícias, manter apenas os publicados há no máximo 2 anos 
     .filter(
         ~(col("file_path").contains("poli_ufrj_br_noticia")) | 
-        ((col("file_path").contains("poli_ufrj_br_noticia")) & (col("last_modified") > add_months(current_date(), -12)))
+        ((col("file_path").contains("poli_ufrj_br_noticia")) & (col("last_modified") > add_months(current_date(), -24)))
     )
     .filter(
         ~(col("file_path").contains("poli_ufrj_br_evento")) | 
-        ((col("file_path").contains("poli_ufrj_br_evento")) & (col("last_modified") > add_months(current_date(), -12)))
+        ((col("file_path").contains("poli_ufrj_br_evento")) & (col("last_modified") > add_months(current_date(), -24)))
     )
 
     # Filtrar páginas de cronograma de concurso para docentes
@@ -166,8 +166,6 @@ df_tb_poli_knowledge_base = (
 # COMMAND ----------
 
 upsert_to_delta_lake(df=df_tb_poli_knowledge_base, delta_table_path=output_path, key_column=output_key)
-save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_html, target_path=output_path)
-save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_pdf, target_path=output_path)
 
 # COMMAND ----------
 
@@ -181,3 +179,9 @@ upsert_to_sql_with_retry(
     df=df_tb_poli_knowledge_base, schema_name=schema_name, table_name=table_name, key=output_key, 
     db_username=sql_login, db_password=sql_password, db_database=sql_database, db_hostname=sql_hostname
 )
+
+# COMMAND ----------
+
+# Checkpoint salvo só após as duas cargas: se a carga no SQL falhar, a próxima execução reprocessa os mesmos dados
+save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_html, target_path=output_path)
+save_checkpoint(checkpoint_path=checkpoint_path, source_path=input_path_poli_consolidated_pdf, target_path=output_path)

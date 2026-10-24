@@ -38,19 +38,17 @@ resource "azurerm_function_app_flex_consumption" "chat" {
   }
 
   app_settings = {
-    OPENAI_API_KEY                    = format(local.key_vault_ref, "openai-api-key")
-    AZURE_SEARCH_ADMIN_KEY            = format(local.key_vault_ref, "azure-search-admin-key")
-    AZURE_SEARCH_ENDPOINT             = "https://${azurerm_search_service.main.name}.search.windows.net"
-    AZURESEARCH_FIELDS_CONTENT        = "chunk"
-    AZURESEARCH_FIELDS_CONTENT_VECTOR = "vector"
-    AZURESEARCH_FIELDS_ID             = "chunk_id"
-    COMPLETION_MODEL                  = "gpt-4o-2024-08-06"
-    EMBEDDING_DIMENSIONS              = "1024"
-    EMBEDDING_MODEL                   = "text-embedding-3-large"
-    MODEL_TEMPERATURE                 = "0"
-    NUM_DOCS_TO_RETRIEVE              = "10"
-    SEARCH_INDEX_NAME                 = "poligpt-index"
-    SEARCH_TYPE                       = "hybrid"
+    OPENAI_API_KEY         = format(local.key_vault_ref, "openai-api-key")
+    AZURE_SEARCH_QUERY_KEY = format(local.key_vault_ref, azurerm_key_vault_secret.search_query_key.name)
+    AZURE_SEARCH_ENDPOINT  = "https://${azurerm_search_service.main.name}.search.windows.net"
+    SEARCH_INDEX_NAME      = "poligpt-index"
+    COMPLETION_MODEL       = "gpt-6-luna"
+    REASONING_EFFORT       = "low"
+    EMBEDDING_MODEL        = "text-embedding-3-large"
+    EMBEDDING_DIMENSIONS   = "1024"
+    NUM_DOCS_TO_RETRIEVE   = "8"
+    # Habilita respostas HTTP em stream (extensão FastAPI do Azure Functions)
+    PYTHON_ENABLE_INIT_INDEXING = "1"
   }
 
   site_config {

@@ -26,11 +26,12 @@ const ChatInput: React.FC = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (message.trim() && !isLoading) {
-      await sendMessage(message);
+      // Clear the input right away: the answer is streamed and may take a few seconds
       setMessage('');
       if (textareaRef.current) {
         textareaRef.current.style.height = 'auto';
       }
+      await sendMessage(message);
     }
   };
 

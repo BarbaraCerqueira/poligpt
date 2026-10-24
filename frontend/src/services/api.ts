@@ -25,11 +25,19 @@ export class AccessDeniedError extends Error {
 export interface ChatRequest {
   query: string;
   chat_history: Array<{ role: string; content: string }>;
-  session_id: string;
 }
 
-export interface ChatResponse {
-  response: string;
+export interface Source {
+  id: number;
+  title: string;
+  url: string | null;
+}
+
+// Callbacks for the events streamed by the API while the answer is generated
+export interface StreamHandlers {
+  onStatus: (status: string) => void;
+  onToken: (token: string) => void;
+  onSources: (sources: Source[]) => void;
 }
 
 export const getAccessCode = (): string | null => getFromStorage<string | null>(ACCESS_CODE_STORAGE_KEY, null);
@@ -68,11 +76,13 @@ export const validateAccessCode = async (code: string): Promise<boolean> => {
 };
 
 /**
- * Sends a message to the API and returns the response
- * @param data Chat request data containing query, history and session ID
- * @returns The API response with the assistant's message
+ * Sends a message to the API and reads the answer as it is generated. The API streams
+ * Server-Sent Events: status (searching the documents), token (piece of the answer),
+ * sources (documents cited in the answer), done and error.
+ * @param data Chat request data containing query and history
+ * @param handlers Callbacks for each type of event
  */
-export const sendChatMessage = async (data: ChatRequest): Promise<ChatResponse> => {
+export const streamChatMessage = async (data: ChatRequest, handlers: StreamHandlers): Promise<void> => {
   try {
     const response = await postToApi(data, getAccessCode());
 
@@ -82,11 +92,30 @@ export const sendChatMessage = async (data: ChatRequest): Promise<ChatResponse> 
       throw new AccessDeniedError();
     }
 
-    if (!response.ok) {
+    if (!response.ok || !response.body) {
       throw new Error(`API error: ${response.status}`);
     }
 
-    return await response.json();
+    const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+    let buffer = '';
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+
+      // Events are separated by a blank line; the last piece may be incomplete
+      buffer += value;
+      const events = buffer.split('\n\n');
+      buffer = events.pop() ?? '';
+
+      for (const event of events) {
+        if (!event.startsWith('data: ')) continue;
+        const payload = JSON.parse(event.slice('data: '.length));
+        if (payload.type === 'status') handlers.onStatus(payload.status);
+        else if (payload.type === 'token') handlers.onToken(payload.content);
+        else if (payload.type === 'sources') handlers.onSources(payload.sources);
+        else if (payload.type === 'error') throw new Error(payload.message);
+      }
+    }
   } catch (error) {
     console.error('Error sending chat message:', error);
     throw error;

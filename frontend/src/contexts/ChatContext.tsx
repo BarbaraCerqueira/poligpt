@@ -1,10 +1,12 @@
 import React, { createContext, useState, useEffect, ReactNode, useRef } from 'react';
-import { AccessDeniedError, sendChatMessage } from '../services/api';
+import { AccessDeniedError, Source, streamChatMessage } from '../services/api';
 
 // Define types for our context
 export interface Message {
   role: 'user' | 'assistant';
   content: string;
+  status?: string; // what the assistant is doing before the answer starts (e.g. 'searching')
+  sources?: Source[]; // documents cited in the answer
 }
 
 export interface Chat {
@@ -138,37 +140,48 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     }
   };
 
+  // Updates the last message of a chat (the assistant answer being streamed)
+  const updateLastMessage = (chatId: string, update: (message: Message) => Message) => {
+    setChats(prevChats =>
+      prevChats.map(chat =>
+        chat.id === chatId
+          ? { ...chat, messages: [...chat.messages.slice(0, -1), update(chat.messages[chat.messages.length - 1])] }
+          : chat
+      )
+    );
+  };
+
   const sendMessage = async (content: string) => {
+    const chatId = currentChatId;
+
+    // Prepare the chat history in the format expected by the API
+    const chatHistory = currentChat?.messages.map(msg => ({
+      role: msg.role,
+      content: msg.content
+    })) || [];
+
+    // Add the user message and an empty assistant message, filled as the answer arrives
+    appendMessage({ role: 'user', content });
+    appendMessage({ role: 'assistant', content: '' });
+    setIsLoading(true);
+
     try {
-      // Add user message to state
-      appendMessage({ role: 'user', content });
-      
-      // Set loading state
-      setIsLoading(true);
-      
-      // Prepare the chat history in the format expected by the API
-      const chatHistory = currentChat?.messages.map(msg => ({
-        role: msg.role,
-        content: msg.content
-      })) || [];
-      
-      // Use the API service instead of direct fetch
-      const response = await sendChatMessage({
-        query: content,
-        chat_history: chatHistory,
-        session_id: currentChatId
+      await streamChatMessage({ query: content, chat_history: chatHistory }, {
+        // A new search means any text received so far was not the final answer
+        onStatus: (status) => updateLastMessage(chatId, msg => ({ ...msg, status, content: '' })),
+        onToken: (token) => updateLastMessage(chatId, msg => ({ ...msg, status: undefined, content: msg.content + token })),
+        onSources: (sources) => updateLastMessage(chatId, msg => ({ ...msg, sources })),
       });
-      
-      // Add assistant response to state
-      appendMessage({ role: 'assistant', content: response.response });
     } catch (error) {
       console.error('Error sending message:', error);
-      appendMessage({
-        role: 'assistant',
-        content: error instanceof AccessDeniedError
-          ? 'Seu código de acesso não é mais válido. Informe um novo código e tente novamente.'
-          : 'Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.'
-      });
+      const errorMessage = error instanceof AccessDeniedError
+        ? 'Seu código de acesso não é mais válido. Informe um novo código e tente novamente.'
+        : 'Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.';
+      updateLastMessage(chatId, msg => ({
+        ...msg,
+        status: undefined,
+        content: msg.content ? `${msg.content}\n\n*${errorMessage}*` : errorMessage
+      }));
     } finally {
       setIsLoading(false);
     }

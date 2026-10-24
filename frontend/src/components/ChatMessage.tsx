@@ -1,5 +1,6 @@
 import React from 'react';
 import { Message } from '../contexts/ChatContext';
+import { Source } from '../services/api';
 import userAvatar from '../assets/user_avatar.png';
 import assistantAvatar from '../assets/assistant_avatar.png';
 import ReactMarkdown from 'react-markdown';
@@ -9,10 +10,18 @@ interface ChatMessageProps {
   message: Message;
 }
 
+// Turns citations like [1] into links to the cited document, when it has a URL
+const linkCitations = (content: string, sources: Source[] = []): string =>
+  content.replace(/\[(\d+)\]/g, (citation, id) => {
+    const source = sources.find(s => s.id === Number(id));
+    return source?.url ? `[${citation}](<${source.url}>)` : citation;
+  });
+
 const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
   const avatar = message.role === 'user' ? userAvatar : assistantAvatar;
   const name = message.role === 'user' ? 'Você' : 'PoliGPT';
-  
+  const isWaiting = message.role === 'assistant' && !message.content;
+
   return (
     <div 
       className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fadeIn mb-6`}
@@ -33,7 +42,17 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               : 'bg-white/80 dark:bg-gray-700 text-gray-700 dark:text-gray-100 rounded-tl-none shadow-md'
           }`}
         >
-          {message.role === 'assistant' ? (
+          {isWaiting ? (
+            <div className="flex items-center gap-2 py-1 text-sm text-gray-500 dark:text-gray-300">
+              <div className="animate-pulse flex space-x-1">
+                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
+                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
+                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
+              </div>
+              {message.status === 'searching' && <span>Buscando nos documentos da Poli...</span>}
+            </div>
+          ) : message.role === 'assistant' ? (
+            <>
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
@@ -65,8 +84,26 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
                 )
               }}
             >
-              {message.content}
+              {linkCitations(message.content, message.sources)}
             </ReactMarkdown>
+            {message.sources && message.sources.length > 0 && (
+              <div className="mt-3 pt-2 border-t border-gray-300 dark:border-gray-600 text-sm">
+                <p className="font-semibold mb-1">Fontes</p>
+                <ul className="space-y-1">
+                  {message.sources.map(source => (
+                    <li key={source.id}>
+                      [{source.id}]{' '}
+                      {source.url ? (
+                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline dark:text-blue-400">
+                          {source.title}
+                        </a>
+                      ) : source.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            </>
           ) : (
             <p className="whitespace-pre-wrap">{message.content}</p>
           )}
