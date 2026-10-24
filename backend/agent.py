@@ -2,7 +2,8 @@ import os
 import sys
 import time
 import logging
-from datetime import date
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from urllib.parse import unquote
 
 from azure.core.credentials import AzureKeyCredential
@@ -110,7 +111,7 @@ def create_poligpt_agent(sources: dict):
     return create_agent(
         model=llm,
         tools=[create_search_tool(sources)],
-        system_prompt=SYSTEM_PROMPT.format(today=date.today().strftime("%d/%m/%Y"), max_searches=MAX_SEARCHES),
+        system_prompt=SYSTEM_PROMPT.format(today=datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%d/%m/%Y"), max_searches=MAX_SEARCHES),
         # Limite garantido pelo framework: chamadas além de MAX_SEARCHES são recusadas com uma mensagem ao modelo
         middleware=[ToolCallLimitMiddleware(run_limit=MAX_SEARCHES)],
     )
