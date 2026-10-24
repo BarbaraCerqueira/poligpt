@@ -10,11 +10,14 @@ interface ChatMessageProps {
   message: Message;
 }
 
-// Turns citations like [1] into links to the cited document, when it has a URL
+// Turns citations like [1] into links to the cited document, when it has a URL. Citations are renumbered by
+// the source's position (1, 2, 3...), since only the cited documents are returned and their ids can skip numbers
 const linkCitations = (content: string, sources: Source[] = []): string =>
   content.replace(/\[(\d+)\]/g, (citation, id) => {
-    const source = sources.find(s => s.id === Number(id));
-    return source?.url ? `[${citation}](<${source.url}>)` : citation;
+    const index = sources.findIndex(s => s.id === Number(id));
+    if (index === -1) return citation;
+    const number = `[${index + 1}]`;
+    return sources[index].url ? `[${number}](<${sources[index].url}>)` : number;
   });
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
@@ -90,9 +93,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               <div className="mt-3 pt-2 border-t border-gray-300 dark:border-gray-600 text-sm">
                 <p className="font-semibold mb-1">Fontes</p>
                 <ul className="space-y-1">
-                  {message.sources.map(source => (
+                  {message.sources.map((source, index) => (
                     <li key={source.id}>
-                      [{source.id}]{' '}
+                      [{index + 1}]{' '}
                       {source.url ? (
                         <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline dark:text-blue-400">
                           {source.title}
