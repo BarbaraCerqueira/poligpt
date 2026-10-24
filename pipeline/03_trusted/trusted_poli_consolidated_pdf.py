@@ -20,8 +20,9 @@ sys.path.append(etl_folder_path)
 
 from delta.tables import DeltaTable
 from pyspark.sql import Row
+from pyspark.sql.window import Window
 from pyspark.sql.types import StringType, DoubleType
-from pyspark.sql.functions import col, lit, when, length, udf, to_timestamp, regexp_replace, trim, unix_timestamp, current_timestamp
+from pyspark.sql.functions import col, lit, when, length, udf, to_timestamp, regexp_replace, trim, unix_timestamp, current_timestamp, row_number
 from utils import list_all_files, upsert_to_delta_lake, save_checkpoint, get_checkpoint_by_source
 
 # COMMAND ----------
@@ -34,12 +35,14 @@ from utils import list_all_files, upsert_to_delta_lake, save_checkpoint, get_che
 input_base_path = "/mnt/adlsraw/pdf/"
 output_path = "/mnt/adlstrusted/poli_consolidated_pdf/"
 checkpoint_path = "/mnt/adlstrusted/checkpoints/poli_consolidated_pdf/"
+ingestion_control_path = "/mnt/adlscontrol/ingestion_logs/"
 num_processes = 4
 max_tasks_per_process = 20           # recria cada processo após N PDFs, devolvendo a memória acumulada pelo MuPDF/Tesseract
 
 # OCR (Tesseract, via PyMuPDF) para páginas sem texto extraível. Uma página passa por OCR quando:
 #   1. o texto existente é ilegível (fontes sem mapeamento Unicode viram o caractere U+FFFD); ou
-#   2. não tem camada de texto (menos de `ocr_min_chars_per_page` caracteres) e contém imagens; ou
+#   2. não tem camada de texto (menos de `ocr_min_chars_per_page` caracteres) e contém imagens ou muitos desenhos
+#      vetoriais (texto convertido em curvas, comum em páginas impressas pelo navegador); ou
 #   3. é dominada por imagem (digitalização), mesmo com algum texto digital por cima (carimbo, cabeçalho).
 # Imagens dentro de páginas digitais comuns (logos, fotos, gráficos) não passam por OCR.
 ocr_language = "por"
@@ -47,6 +50,7 @@ ocr_dpi = 300                        # resolução recomendada para o Tesseract
 ocr_max_megapixels = 25              # limite de tamanho da imagem renderizada para o OCR (A4 a 300 dpi ≈ 8,7 MP)
 ocr_min_chars_per_page = 50          # abaixo disso, a página é considerada sem camada de texto
 ocr_min_image_coverage = 0.1         # ignora páginas sem texto que só têm imagens pequenas (ex.: logo)
+ocr_min_vector_drawings = 200        # desenhos vetoriais que indicam texto em curvas (bordas e enfeites ficam bem abaixo disso)
 ocr_scanned_image_coverage = 0.8     # fração da página coberta por imagem para considerá-la digitalizada
 ocr_scanned_max_chars = 300          # máximo de texto digital presente em página com imagem para permitir OCR
 ocr_max_illegible_ratio = 0.1        # fração de caracteres ilegíveis (U+FFFD) que indica texto corrompido
@@ -81,7 +85,7 @@ def page_needs_ocr(page, text):
         return True
     coverage = image_coverage(page)
     if chars < ocr_min_chars_per_page:
-        return coverage >= ocr_min_image_coverage
+        return coverage >= ocr_min_image_coverage or len(page.get_drawings()) >= ocr_min_vector_drawings
     return coverage >= ocr_scanned_image_coverage and chars <= ocr_scanned_max_chars
 
 # Função executada ao iniciar cada processo de OCR, que descarta o stderr nativo do processo. O Tesseract e o Leptonica
@@ -215,6 +219,21 @@ def valid_char_ratio(text):
 
 # COMMAND ----------
 
+# Função para obter a URL de origem de cada PDF a partir da tabela de logs de ingestão, que registra onde cada arquivo
+# foi salvo. Se o mesmo arquivo foi baixado mais de uma vez (e sobrescrito na camada Raw), vale o download mais recente.
+def get_pdf_source_urls():
+    window_file = Window.partitionBy("ds_file_path").orderBy(col("dt_ocurrence").desc())
+
+    return (
+        spark.read.format("delta").load(ingestion_control_path)
+        .filter((col("ds_status") == "Sucesso") & (col("ds_data_format") == "PDF"))
+        .withColumn("row_number", row_number().over(window_file))
+        .filter(col("row_number") == 1)
+        .select(col("ds_file_path").alias("file_path"), col("ds_affected_url").alias("url"))
+    )
+
+# COMMAND ----------
+
 # MAGIC %md
 # MAGIC ## Extração e Transformação dos Dados 
 # MAGIC
@@ -297,10 +316,12 @@ df_poli_consolidated_pdf = (
     .filter(length(col("content")) > 200)  # desconsiderar arquivos muito curtos
     .filter(col("content").isNotNull())
     .dropDuplicates(["content"])
+    .join(get_pdf_source_urls(), on="file_path", how="left")  # URL de origem de cada PDF
     .replace('N/A', None)
     .replace('', None)
     .select(
         col("file_path").cast("string"),
+        col("url").cast("string"),
         col("title").cast("string"),
         col("author").cast("string"),
         col("creator").cast("string"),

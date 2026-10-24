@@ -95,7 +95,7 @@ def download_html(url, url_id):
         dbutils.fs.put(html_path, html_content, overwrite=True)
         print(f"HTML salvo em: {html_path}")
 
-        log_ingestion_event(job_id, url, "HTML", "Sucesso", "Arquivo extraído e salvo com sucesso")
+        log_ingestion_event(job_id, url, "HTML", "Sucesso", "Arquivo extraído e salvo com sucesso", file_path=html_path)
         return html_content
     
     except requests.exceptions.Timeout:
@@ -148,7 +148,7 @@ def download_pdfs(html_content, url_id, base_url):
                     pdf_file.write(pdf_content)
                 print(f"PDF salvo em: {pdf_path}")
 
-                log_ingestion_event(job_id, pdf_url, "PDF", "Sucesso", "Arquivo extraído e salvo com sucesso")
+                log_ingestion_event(job_id, pdf_url, "PDF", "Sucesso", "Arquivo extraído e salvo com sucesso", file_path=pdf_path)
             
             except requests.exceptions.Timeout:
                 print("Timeout ao tentar baixar o PDF")

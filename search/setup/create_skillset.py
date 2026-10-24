@@ -77,6 +77,7 @@ def create_skillset():
                 parent_key_field_name="parent_id",  
                 source_context="/document/pages/*",  
                 mappings=[
+                    InputFieldMappingEntry(name="url", source="/document/ds_url"),
                     InputFieldMappingEntry(name="title", source="/document/ds_title_document"),
                     InputFieldMappingEntry(name="keywords", source="/document/ds_keywords"),
                     InputFieldMappingEntry(name="last_modified", source="/document/dt_last_modified"),

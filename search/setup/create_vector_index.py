@@ -34,6 +34,7 @@ index_client = SearchIndexClient(endpoint=azure_search_endpoint, credential=azur
 fields = [  
     SearchField(name="chunk_id", type=SearchFieldDataType.String, key=True, sortable=True, filterable=True, analyzer_name="keyword"),
     SearchField(name="parent_id", type=SearchFieldDataType.String, sortable=True, filterable=True, facetable=True),  
+    SearchField(name="url", type=SearchFieldDataType.String, searchable=False, filterable=True),
     SearchField(name="title", type=SearchFieldDataType.String, searchable=True, sortable=True, filterable=True),
     SearchField(name="keywords", type=SearchFieldDataType.String, searchable=True, sortable=True, filterable=True),
     SearchField(name="last_modified", type=SearchFieldDataType.String, searchable=False, sortable=True, filterable=True),
