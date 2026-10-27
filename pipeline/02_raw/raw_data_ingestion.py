@@ -48,7 +48,8 @@ ingestion_control_path = "/mnt/adlscontrol/ingestion_logs/"
 # Sub-sitemaps que contém apenas páginas com informações redundantes, irrelevantes para o contexto ou inexistentes, e que não devem ser ingeridos
 sub_sitemaps_to_ignore = [
     "http://poli.ufrj.br/category-sitemap.xml", 
-    "http://poli.ufrj.br/courses-sitemap.xml", 
+    "http://poli.ufrj.br/courses-sitemap.xml",
+    "http://poli.ufrj.br/curso-sitemap.xml",
     "http://poli.ufrj.br/docente-sitemap.xml",
     "http://poli.ufrj.br/tecnico-sitemap.xml",
     "http://poli.ufrj.br/imprensa-sitemap.xml",
