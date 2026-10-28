@@ -34,7 +34,11 @@ COMPLETION_MODEL = os.getenv("COMPLETION_MODEL", "gpt-6-luna")
 REASONING_EFFORT = os.getenv("REASONING_EFFORT", "low")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIMENSIONS = int(os.getenv("EMBEDDING_DIMENSIONS", 1024))  # precisa ser igual ao usado na indexação
-NUM_DOCS_TO_RETRIEVE = int(os.getenv("NUM_DOCS_TO_RETRIEVE", 8))
+NUM_DOCS_TO_RETRIEVE = int(os.getenv("NUM_DOCS_TO_RETRIEVE", 8))  # trechos entregues ao modelo por busca
+# Busca vetorial na fusão com a busca por texto, escolhidos na avaliação da busca: quantos candidatos entram e o peso
+# deles (a busca por texto tem peso 1)
+VECTOR_CANDIDATES = 50
+VECTOR_WEIGHT = 0.5
 MAX_SEARCHES = 3  # buscas por pergunta; a partir daí, a ferramenta é bloqueada e o modelo responde com o que tem
 OPENAI_TIMEOUT_SECONDS = 60  # tempo máximo de cada chamada à OpenAI (o padrão da biblioteca é 10 minutos)
 
@@ -99,10 +103,10 @@ def create_search_tool(sources: dict):
         vector = embeddings.embed_query(consulta)
         embedding_seconds = time.time() - start
 
-        # Busca híbrida: texto (BM25) e similaridade vetorial, combinadas pelo AI Search
+        # Busca híbrida: texto (BM25) e similaridade vetorial, combinadas pelo AI Search (RRF)
         results = list(search_client.search(
             search_text=consulta,
-            vector_queries=[VectorizedQuery(vector=vector, k_nearest_neighbors=NUM_DOCS_TO_RETRIEVE, fields="vector")],
+            vector_queries=[VectorizedQuery(vector=vector, k_nearest_neighbors=VECTOR_CANDIDATES, fields="vector", weight=VECTOR_WEIGHT)],
             select=["parent_id", "title", "url", "last_modified", "chunk"],
             top=NUM_DOCS_TO_RETRIEVE,
         ))
@@ -122,12 +126,13 @@ def create_search_tool(sources: dict):
     return buscar_documentos_poli
 
 
-def create_poligpt_agent(sources: dict):
+def create_poligpt_agent(sources: dict, model: ChatOpenAI = llm):
     """
     Cria o agente de uma conversa: o modelo decide quando buscar nos documentos e responde citando as fontes.
+    O modelo padrão é o do chatbot; a avaliação das respostas passa outros para compará-los.
     """
     return create_agent(
-        model=llm,
+        model=model,
         tools=[create_search_tool(sources)],
         system_prompt=SYSTEM_PROMPT.format(today=datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%d/%m/%Y"), max_searches=MAX_SEARCHES),
         # Limite garantido pelo framework: chamadas além de MAX_SEARCHES são recusadas com uma mensagem ao modelo
