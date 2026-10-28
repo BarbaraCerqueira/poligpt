@@ -34,7 +34,11 @@ COMPLETION_MODEL = os.getenv("COMPLETION_MODEL", "gpt-6-luna")
 REASONING_EFFORT = os.getenv("REASONING_EFFORT", "low")
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "text-embedding-3-large")
 EMBEDDING_DIMENSIONS = int(os.getenv("EMBEDDING_DIMENSIONS", 1024))  # precisa ser igual ao usado na indexação
-NUM_DOCS_TO_RETRIEVE = int(os.getenv("NUM_DOCS_TO_RETRIEVE", 8))
+NUM_DOCS_TO_RETRIEVE = int(os.getenv("NUM_DOCS_TO_RETRIEVE", 8))  # trechos entregues ao modelo por busca
+# Busca vetorial na fusão com a busca por texto, escolhidos na avaliação da busca: quantos candidatos entram e o peso
+# deles (a busca por texto tem peso 1)
+VECTOR_CANDIDATES = 50
+VECTOR_WEIGHT = 0.5
 MAX_SEARCHES = 3  # buscas por pergunta; a partir daí, a ferramenta é bloqueada e o modelo responde com o que tem
 OPENAI_TIMEOUT_SECONDS = 60  # tempo máximo de cada chamada à OpenAI (o padrão da biblioteca é 10 minutos)
 
@@ -53,6 +57,9 @@ documentos da Poli e, quando possível, indique onde procurar (por exemplo, a se
 URLs na resposta: as fontes são exibidas separadamente.
 - Considere a data dos documentos: prefira os mais recentes e avise quando a informação puder estar desatualizada, \
 como prazos e calendários de anos anteriores.
+- Grade horária, turmas oferecidas, professores de cada turma, notas e histórico são informações do SIGA, que não faz \
+parte dos documentos da Poli. Mesmo que encontre algo sobre isso, avise que pode estar desatualizado ou incompleto e \
+indique o SIGA (siga.ufrj.br) como fonte oficial.
 - Seja direto e organizado. Use listas e negrito em Markdown quando ajudarem, sem repetir a pergunta.
 - Responda no idioma da pergunta.
 - Perguntas sem relação com a Poli ou a UFRJ (conhecimentos gerais, história, outras instituições, pedidos para \
@@ -68,7 +75,7 @@ e Oceânica).
 DEI (Engenharia Industrial), DEL (Engenharia Eletrônica e de Computação), DEM (Engenharia Mecânica), DENO \
 (Engenharia Naval e Oceânica), DES (Estruturas), DET (Engenharia de Transportes), DMM (Engenharia Metalúrgica e de \
 Materiais), DNC (Engenharia Nuclear), DRHIMA (Recursos Hídricos e Meio Ambiente).
-- Órgãos: DAEG (Diretoria Adjunta de Ensino de Graduação; DAEX (Diretoria Adjunta de Ensino e Extensão), DARI \
+- Órgãos: DAEG (Diretoria Adjunta de Ensino de Graduação), DAEX (Diretoria Adjunta de Ensino e Extensão), DARI \
 (Diretoria Adjunta de Relações Internacionais), DAPE (Diretoria Adjunta de Políticas Estudantis), COAA (Comissão de \
 Orientação e Acompanhamento Acadêmico), NPPG (Núcleo de Pesquisas em Planejamento e Gestão), DRE (Divisão de Registro \
 de Estudantes), PR-1 (Pró-Reitoria de Graduação), CEG (Conselho de Ensino de Graduação). EQ (Escola de Química), que é \
@@ -96,10 +103,10 @@ def create_search_tool(sources: dict):
         vector = embeddings.embed_query(consulta)
         embedding_seconds = time.time() - start
 
-        # Busca híbrida: texto (BM25) e similaridade vetorial, combinadas pelo AI Search
+        # Busca híbrida: texto (BM25) e similaridade vetorial, combinadas pelo AI Search (RRF)
         results = list(search_client.search(
             search_text=consulta,
-            vector_queries=[VectorizedQuery(vector=vector, k_nearest_neighbors=NUM_DOCS_TO_RETRIEVE, fields="vector")],
+            vector_queries=[VectorizedQuery(vector=vector, k_nearest_neighbors=VECTOR_CANDIDATES, fields="vector", weight=VECTOR_WEIGHT)],
             select=["parent_id", "title", "url", "last_modified", "chunk"],
             top=NUM_DOCS_TO_RETRIEVE,
         ))
@@ -119,12 +126,13 @@ def create_search_tool(sources: dict):
     return buscar_documentos_poli
 
 
-def create_poligpt_agent(sources: dict):
+def create_poligpt_agent(sources: dict, model: ChatOpenAI = llm):
     """
     Cria o agente de uma conversa: o modelo decide quando buscar nos documentos e responde citando as fontes.
+    O modelo padrão é o do chatbot; a avaliação das respostas passa outros para compará-los.
     """
     return create_agent(
-        model=llm,
+        model=model,
         tools=[create_search_tool(sources)],
         system_prompt=SYSTEM_PROMPT.format(today=datetime.now(ZoneInfo("America/Sao_Paulo")).strftime("%d/%m/%Y"), max_searches=MAX_SEARCHES),
         # Limite garantido pelo framework: chamadas além de MAX_SEARCHES são recusadas com uma mensagem ao modelo
