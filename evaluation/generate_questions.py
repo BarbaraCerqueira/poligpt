@@ -3,7 +3,8 @@ Gera o conjunto de perguntas de teste a partir do índice de busca, para revisã
 
 Sorteia documentos do índice (metade páginas, metade PDFs) e, para um trecho de cada um, pede a um LLM uma pergunta
 que um aluno faria e a resposta esperada. O documento sorteado é o gabarito da busca (recall@k).
-O resultado vai para uma planilha (CSV) que é revisada à mão antes de ser usada na avaliação.
+O resultado vai para uma planilha (CSV) que é revisada à mão antes de ser usada na avaliação: a revisão está em
+data/perguntas_revisadas.xlsx e o conjunto final, em data/perguntas_avaliacao.xlsx.
 
 Uso: python generate_questions.py [quantidade de documentos]
 Variáveis de ambiente: as mesmas do backend (OPENAI_API_KEY, AZURE_SEARCH_ENDPOINT, AZURE_SEARCH_QUERY_KEY).
@@ -25,7 +26,7 @@ NUM_DOCUMENTS = int(sys.argv[1]) if len(sys.argv) > 1 else 80
 GENERATOR_MODEL = "gpt-6-sol"  # modelo diferente do usado pelo chatbot, para não favorecê-lo
 MIN_CHUNK_CHARS = 400  # trechos menores costumam ser só menus, listas de links ou nomes
 RANDOM_SEED = 42
-OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "perguntas_para_revisao.csv")
+OUTPUT_FILE = os.path.join(os.path.dirname(__file__), "data", "perguntas_geradas.csv")
 
 PROMPT = """Você está montando um conjunto de testes para o PoliGPT, chatbot que responde dúvidas de alunos, \
 professores e candidatos da Escola Politécnica da UFRJ com base nos documentos do site da Poli.
@@ -57,7 +58,8 @@ def sample_chunks() -> list:
     """
     Sorteia um trecho de cada documento, com metade dos documentos sendo páginas e metade PDFs.
     """
-    chunks = list(search_client.search(search_text="*", select=["parent_id", "url", "title", "last_modified", "chunk"], top=100000))
+    # A ordenação é necessária para paginar o índice inteiro: sem ela, a busca repete e pula trechos
+    chunks = list(search_client.search(search_text="*", select=["parent_id", "url", "title", "last_modified", "chunk"], order_by=["chunk_id"], top=100000))
     chunks = [c for c in chunks if len(c["chunk"]) >= MIN_CHUNK_CHARS]
 
     documents = {}
