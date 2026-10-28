@@ -7,7 +7,7 @@ posição do primeiro trecho que vem de um dos documentos esperados (qualquer um
 - recall@k: porcentagem de perguntas com acerto entre os k primeiros trechos (o chatbot recebe 8);
 - MRR: média de 1/posição do primeiro acerto (0 quando não há acerto entre os MAX_RANK primeiros).
 
-As consultas do modelo são geradas uma vez e salvas em results/consultas_modelo.json, para que as execuções usem as
+As consultas do modelo são geradas uma vez e salvas em data/consultas_modelo.json, para que as execuções usem as
 mesmas e possam ser comparadas. Apague o arquivo para gerar de novo (por exemplo, depois de mudar o prompt ou o modelo).
 
 Uso: python evaluate_retrieval.py
@@ -31,7 +31,7 @@ from agent import search_client, embeddings, llm, create_search_tool, SYSTEM_PRO
 
 QUESTIONS_FILE = os.path.join(os.path.dirname(__file__), "data", "perguntas_avaliacao.xlsx")
 RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
-MODEL_QUERIES_FILE = os.path.join(RESULTS_DIR, "consultas_modelo.json")
+MODEL_QUERIES_FILE = os.path.join(os.path.dirname(__file__), "data", "consultas_modelo.json")
 
 MAX_RANK = 20  # trechos buscados por consulta; posições além disso contam como não encontrado
 RECALL_AT = [1, 3, 5, 8, 10, 15, 20]
@@ -87,7 +87,6 @@ def load_model_queries(questions: list) -> dict:
 
     # Mantém só as perguntas atuais, descartando as que saíram da planilha
     queries = {q["pergunta"]: queries[q["pergunta"]] for q in questions}
-    os.makedirs(RESULTS_DIR, exist_ok=True)
     with open(MODEL_QUERIES_FILE, "w", encoding="utf-8") as file:
         json.dump(queries, file, ensure_ascii=False, indent=2)
     return queries
@@ -138,6 +137,7 @@ def main():
         print(f"{summary['config']:<16}" + "".join(f"{value:>11.3f}" for value in list(summary.values())[2:]))
 
     # Separador ";" e BOM para o Excel em português abrir direto, como na geração das perguntas
+    os.makedirs(RESULTS_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     for name, rows in [("resumo", summaries), ("detalhes", details)]:
         path = os.path.join(RESULTS_DIR, f"busca_{timestamp}_{name}.csv")

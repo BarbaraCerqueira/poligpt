@@ -27,6 +27,7 @@ Frontend React (Static Web App) ──► Backend (Azure Function + LangGraph + 
 | [`search/`](search/) | Scripts de criação dos objetos do Azure AI Search (`setup/`) e função de embeddings (`embedding-function/`) usada por ele |
 | [`backend/`](backend/) | API do chat (Azure Function com agente RAG em LangGraph) |
 | [`frontend/`](frontend/) | Interface web do chat (React + Vite + Tailwind) |
+| [`evaluation/`](evaluation/) | Avaliação da busca e das respostas do chat: conjunto de perguntas, scripts e resultados |
 | [`experiments/`](experiments/) | Notebooks e scripts exploratórios usados durante o desenvolvimento |
 
 ### Pipeline de dados

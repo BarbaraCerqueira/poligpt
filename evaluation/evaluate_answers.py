@@ -187,6 +187,7 @@ def main():
         print(f"{name:<26}" + "".join(f"{str(s[name]):>16}" for s in summaries))
 
     # Separador ";" e BOM para o Excel em português abrir direto, como na geração das perguntas
+    os.makedirs(RESULTS_DIR, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     for name, rows in [("resumo", summaries), ("detalhes", details)]:
         path = os.path.join(RESULTS_DIR, f"respostas_{timestamp}_{name}.csv")
