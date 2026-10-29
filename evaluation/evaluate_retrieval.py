@@ -34,7 +34,7 @@ RESULTS_DIR = os.path.join(os.path.dirname(__file__), "results")
 MODEL_QUERIES_FILE = os.path.join(os.path.dirname(__file__), "data", "consultas_modelo.json")
 
 MAX_RANK = 20  # trechos buscados por consulta; posições além disso contam como não encontrado
-RECALL_AT = [1, 3, 5, 8, 10, 15, 20]
+RECALL_AT = [1, 3, 5, 8, 10, 12, 15]
 
 # Peso da busca vetorial na fusão com a busca por texto (BM25), cujo peso é sempre 1; None = sem busca vetorial e
 # text False = sem busca por texto. Todas usam os mesmos candidatos vetoriais do chatbot (VECTOR_CANDIDATES); o peso

@@ -28,37 +28,36 @@ so_texto;26;gerada;Como vejo quanto espaço minha conta PoliMail está usando e 
 so_texto;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;19
 so_texto;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 so_texto;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-so_texto;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;
-so_texto;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-so_texto;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
-so_texto;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-so_texto;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-so_texto;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-so_texto;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
-so_texto;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;1
-so_texto;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
-so_texto;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;2
-so_texto;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;15
-so_texto;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;2
-so_texto;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;1
-so_texto;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;4
-so_texto;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;
-so_texto;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;5
-so_texto;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
-so_texto;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-so_texto;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;2
-so_texto;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
-so_texto;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-so_texto;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;12
-so_texto;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;
-so_texto;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;1
-so_texto;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;
-so_texto;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+so_texto;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+so_texto;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
+so_texto;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
+so_texto;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+so_texto;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+so_texto;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
+so_texto;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;1
+so_texto;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
+so_texto;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;2
+so_texto;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;4
+so_texto;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;2
+so_texto;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;1
+so_texto;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;4
+so_texto;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;9
+so_texto;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+so_texto;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
+so_texto;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+so_texto;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;2
+so_texto;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
+so_texto;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+so_texto;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;12
+so_texto;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;
+so_texto;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;1
+so_texto;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;3
+so_texto;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
 peso_vetor_0.3;1;gerada;Onde posso pesquisar online os livros e as teses disponíveis no acervo da UFRJ?;UFRJ pesquisar online livros teses acervo catálogo bibliotecas sistema;1
 peso_vetor_0.3;2;gerada;Vai ter concurso para professor de Engenharia Econômica na Poli?;concurso público professor Engenharia Econômica Escola Politécnica UFRJ edital vaga;5
 peso_vetor_0.3;3;gerada;A parceria da Poli com o Instituto Reditus pode ajudar os alunos de que forma?;parceria Instituto Reditus Escola Politécnica UFRJ benefícios alunos;1
 peso_vetor_0.3;4;gerada;Onde fica o Laboratório de Engenharia de Produção do Entretenimento da Poli?;Laboratório de Engenharia de Produção do Entretenimento localização onde fica Escola Politécnica UFRJ;1
-peso_vetor_0.3;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;5
+peso_vetor_0.3;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;2
 peso_vetor_0.3;6;gerada;Se uma professora entrar em licença-maternidade, a Poli pode pedir um substituto mesmo fora do prazo normal?;professor substituto licença maternidade contratação fora do prazo edital prazo excepcional Escola Politécnica UFRJ;1
 peso_vetor_0.3;7;gerada;Pra tentar a bolsa do BRAFITEC na chamada emergencial de 2026, quais requisitos eu precisava cumprir?;chamada emergencial BRAFITEC 2026 requisitos bolsa edital;1
 peso_vetor_0.3;8;gerada;Quais professores podem receber o título de Professor Emérito da UFRJ?;UFRJ título Professor Emérito critérios professores podem receber resolução estatuto;2
@@ -83,37 +82,36 @@ peso_vetor_0.3;26;gerada;Como vejo quanto espaço minha conta PoliMail está usa
 peso_vetor_0.3;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;13
 peso_vetor_0.3;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 peso_vetor_0.3;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-peso_vetor_0.3;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;19
-peso_vetor_0.3;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-peso_vetor_0.3;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
-peso_vetor_0.3;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-peso_vetor_0.3;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-peso_vetor_0.3;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-peso_vetor_0.3;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
-peso_vetor_0.3;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;2
-peso_vetor_0.3;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
-peso_vetor_0.3;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;2
-peso_vetor_0.3;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;5
-peso_vetor_0.3;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;2
-peso_vetor_0.3;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;4
-peso_vetor_0.3;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
-peso_vetor_0.3;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;12
-peso_vetor_0.3;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;3
-peso_vetor_0.3;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
-peso_vetor_0.3;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-peso_vetor_0.3;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;2
-peso_vetor_0.3;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
-peso_vetor_0.3;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-peso_vetor_0.3;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;15
-peso_vetor_0.3;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;9
-peso_vetor_0.3;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;2
-peso_vetor_0.3;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;
-peso_vetor_0.3;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+peso_vetor_0.3;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+peso_vetor_0.3;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
+peso_vetor_0.3;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;2
+peso_vetor_0.3;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+peso_vetor_0.3;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+peso_vetor_0.3;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
+peso_vetor_0.3;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;2
+peso_vetor_0.3;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
+peso_vetor_0.3;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;2
+peso_vetor_0.3;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;2
+peso_vetor_0.3;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;13
+peso_vetor_0.3;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;4
+peso_vetor_0.3;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
+peso_vetor_0.3;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;5
+peso_vetor_0.3;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+peso_vetor_0.3;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
+peso_vetor_0.3;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+peso_vetor_0.3;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;2
+peso_vetor_0.3;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
+peso_vetor_0.3;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+peso_vetor_0.3;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;15
+peso_vetor_0.3;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;9
+peso_vetor_0.3;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;2
+peso_vetor_0.3;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;6
+peso_vetor_0.3;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
 peso_vetor_0.5;1;gerada;Onde posso pesquisar online os livros e as teses disponíveis no acervo da UFRJ?;UFRJ pesquisar online livros teses acervo catálogo bibliotecas sistema;1
 peso_vetor_0.5;2;gerada;Vai ter concurso para professor de Engenharia Econômica na Poli?;concurso público professor Engenharia Econômica Escola Politécnica UFRJ edital vaga;5
 peso_vetor_0.5;3;gerada;A parceria da Poli com o Instituto Reditus pode ajudar os alunos de que forma?;parceria Instituto Reditus Escola Politécnica UFRJ benefícios alunos;1
 peso_vetor_0.5;4;gerada;Onde fica o Laboratório de Engenharia de Produção do Entretenimento da Poli?;Laboratório de Engenharia de Produção do Entretenimento localização onde fica Escola Politécnica UFRJ;1
-peso_vetor_0.5;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;7
+peso_vetor_0.5;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;2
 peso_vetor_0.5;6;gerada;Se uma professora entrar em licença-maternidade, a Poli pode pedir um substituto mesmo fora do prazo normal?;professor substituto licença maternidade contratação fora do prazo edital prazo excepcional Escola Politécnica UFRJ;1
 peso_vetor_0.5;7;gerada;Pra tentar a bolsa do BRAFITEC na chamada emergencial de 2026, quais requisitos eu precisava cumprir?;chamada emergencial BRAFITEC 2026 requisitos bolsa edital;1
 peso_vetor_0.5;8;gerada;Quais professores podem receber o título de Professor Emérito da UFRJ?;UFRJ título Professor Emérito critérios professores podem receber resolução estatuto;2
@@ -138,37 +136,36 @@ peso_vetor_0.5;26;gerada;Como vejo quanto espaço minha conta PoliMail está usa
 peso_vetor_0.5;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;12
 peso_vetor_0.5;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 peso_vetor_0.5;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-peso_vetor_0.5;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;15
-peso_vetor_0.5;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-peso_vetor_0.5;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
-peso_vetor_0.5;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-peso_vetor_0.5;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-peso_vetor_0.5;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-peso_vetor_0.5;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
-peso_vetor_0.5;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;3
-peso_vetor_0.5;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
-peso_vetor_0.5;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;2
-peso_vetor_0.5;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;5
-peso_vetor_0.5;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;3
-peso_vetor_0.5;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;5
-peso_vetor_0.5;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
-peso_vetor_0.5;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;10
-peso_vetor_0.5;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;2
-peso_vetor_0.5;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
-peso_vetor_0.5;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-peso_vetor_0.5;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
-peso_vetor_0.5;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
-peso_vetor_0.5;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-peso_vetor_0.5;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;17
-peso_vetor_0.5;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;2
-peso_vetor_0.5;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;3
-peso_vetor_0.5;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;
-peso_vetor_0.5;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+peso_vetor_0.5;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+peso_vetor_0.5;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
+peso_vetor_0.5;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;2
+peso_vetor_0.5;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+peso_vetor_0.5;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+peso_vetor_0.5;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
+peso_vetor_0.5;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;3
+peso_vetor_0.5;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
+peso_vetor_0.5;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;2
+peso_vetor_0.5;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;1
+peso_vetor_0.5;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;13
+peso_vetor_0.5;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;5
+peso_vetor_0.5;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
+peso_vetor_0.5;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;6
+peso_vetor_0.5;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+peso_vetor_0.5;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
+peso_vetor_0.5;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+peso_vetor_0.5;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
+peso_vetor_0.5;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
+peso_vetor_0.5;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+peso_vetor_0.5;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;17
+peso_vetor_0.5;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;2
+peso_vetor_0.5;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;3
+peso_vetor_0.5;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;7
+peso_vetor_0.5;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
 peso_vetor_0.8;1;gerada;Onde posso pesquisar online os livros e as teses disponíveis no acervo da UFRJ?;UFRJ pesquisar online livros teses acervo catálogo bibliotecas sistema;1
 peso_vetor_0.8;2;gerada;Vai ter concurso para professor de Engenharia Econômica na Poli?;concurso público professor Engenharia Econômica Escola Politécnica UFRJ edital vaga;4
 peso_vetor_0.8;3;gerada;A parceria da Poli com o Instituto Reditus pode ajudar os alunos de que forma?;parceria Instituto Reditus Escola Politécnica UFRJ benefícios alunos;1
 peso_vetor_0.8;4;gerada;Onde fica o Laboratório de Engenharia de Produção do Entretenimento da Poli?;Laboratório de Engenharia de Produção do Entretenimento localização onde fica Escola Politécnica UFRJ;1
-peso_vetor_0.8;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;9
+peso_vetor_0.8;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;3
 peso_vetor_0.8;6;gerada;Se uma professora entrar em licença-maternidade, a Poli pode pedir um substituto mesmo fora do prazo normal?;professor substituto licença maternidade contratação fora do prazo edital prazo excepcional Escola Politécnica UFRJ;2
 peso_vetor_0.8;7;gerada;Pra tentar a bolsa do BRAFITEC na chamada emergencial de 2026, quais requisitos eu precisava cumprir?;chamada emergencial BRAFITEC 2026 requisitos bolsa edital;1
 peso_vetor_0.8;8;gerada;Quais professores podem receber o título de Professor Emérito da UFRJ?;UFRJ título Professor Emérito critérios professores podem receber resolução estatuto;2
@@ -193,37 +190,36 @@ peso_vetor_0.8;26;gerada;Como vejo quanto espaço minha conta PoliMail está usa
 peso_vetor_0.8;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;9
 peso_vetor_0.8;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 peso_vetor_0.8;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-peso_vetor_0.8;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;16
-peso_vetor_0.8;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-peso_vetor_0.8;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
-peso_vetor_0.8;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-peso_vetor_0.8;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-peso_vetor_0.8;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-peso_vetor_0.8;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
-peso_vetor_0.8;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;3
-peso_vetor_0.8;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;
-peso_vetor_0.8;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;3
-peso_vetor_0.8;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;6
-peso_vetor_0.8;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;4
-peso_vetor_0.8;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;4
-peso_vetor_0.8;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
-peso_vetor_0.8;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;9
-peso_vetor_0.8;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;2
-peso_vetor_0.8;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
-peso_vetor_0.8;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-peso_vetor_0.8;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
-peso_vetor_0.8;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
-peso_vetor_0.8;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-peso_vetor_0.8;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
-peso_vetor_0.8;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;1
-peso_vetor_0.8;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;5
-peso_vetor_0.8;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;
-peso_vetor_0.8;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+peso_vetor_0.8;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+peso_vetor_0.8;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
+peso_vetor_0.8;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;2
+peso_vetor_0.8;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+peso_vetor_0.8;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+peso_vetor_0.8;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
+peso_vetor_0.8;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;3
+peso_vetor_0.8;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;18
+peso_vetor_0.8;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;3
+peso_vetor_0.8;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;1
+peso_vetor_0.8;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;13
+peso_vetor_0.8;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;4
+peso_vetor_0.8;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
+peso_vetor_0.8;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;5
+peso_vetor_0.8;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+peso_vetor_0.8;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
+peso_vetor_0.8;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+peso_vetor_0.8;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
+peso_vetor_0.8;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
+peso_vetor_0.8;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+peso_vetor_0.8;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
+peso_vetor_0.8;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;1
+peso_vetor_0.8;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;5
+peso_vetor_0.8;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;9
+peso_vetor_0.8;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
 peso_vetor_1.0;1;gerada;Onde posso pesquisar online os livros e as teses disponíveis no acervo da UFRJ?;UFRJ pesquisar online livros teses acervo catálogo bibliotecas sistema;1
 peso_vetor_1.0;2;gerada;Vai ter concurso para professor de Engenharia Econômica na Poli?;concurso público professor Engenharia Econômica Escola Politécnica UFRJ edital vaga;4
 peso_vetor_1.0;3;gerada;A parceria da Poli com o Instituto Reditus pode ajudar os alunos de que forma?;parceria Instituto Reditus Escola Politécnica UFRJ benefícios alunos;1
 peso_vetor_1.0;4;gerada;Onde fica o Laboratório de Engenharia de Produção do Entretenimento da Poli?;Laboratório de Engenharia de Produção do Entretenimento localização onde fica Escola Politécnica UFRJ;1
-peso_vetor_1.0;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;18
+peso_vetor_1.0;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;3
 peso_vetor_1.0;6;gerada;Se uma professora entrar em licença-maternidade, a Poli pode pedir um substituto mesmo fora do prazo normal?;professor substituto licença maternidade contratação fora do prazo edital prazo excepcional Escola Politécnica UFRJ;2
 peso_vetor_1.0;7;gerada;Pra tentar a bolsa do BRAFITEC na chamada emergencial de 2026, quais requisitos eu precisava cumprir?;chamada emergencial BRAFITEC 2026 requisitos bolsa edital;1
 peso_vetor_1.0;8;gerada;Quais professores podem receber o título de Professor Emérito da UFRJ?;UFRJ título Professor Emérito critérios professores podem receber resolução estatuto;2
@@ -248,37 +244,36 @@ peso_vetor_1.0;26;gerada;Como vejo quanto espaço minha conta PoliMail está usa
 peso_vetor_1.0;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;8
 peso_vetor_1.0;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 peso_vetor_1.0;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-peso_vetor_1.0;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;17
-peso_vetor_1.0;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-peso_vetor_1.0;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
-peso_vetor_1.0;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-peso_vetor_1.0;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-peso_vetor_1.0;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-peso_vetor_1.0;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
-peso_vetor_1.0;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;4
-peso_vetor_1.0;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;18
-peso_vetor_1.0;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;3
-peso_vetor_1.0;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;6
-peso_vetor_1.0;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;5
-peso_vetor_1.0;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;3
-peso_vetor_1.0;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
-peso_vetor_1.0;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;8
-peso_vetor_1.0;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;3
-peso_vetor_1.0;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
-peso_vetor_1.0;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-peso_vetor_1.0;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
-peso_vetor_1.0;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
-peso_vetor_1.0;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-peso_vetor_1.0;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
-peso_vetor_1.0;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;1
-peso_vetor_1.0;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;6
-peso_vetor_1.0;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;
-peso_vetor_1.0;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+peso_vetor_1.0;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+peso_vetor_1.0;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
+peso_vetor_1.0;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;2
+peso_vetor_1.0;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+peso_vetor_1.0;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+peso_vetor_1.0;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;2
+peso_vetor_1.0;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;4
+peso_vetor_1.0;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;15
+peso_vetor_1.0;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;3
+peso_vetor_1.0;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;1
+peso_vetor_1.0;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;12
+peso_vetor_1.0;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;3
+peso_vetor_1.0;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
+peso_vetor_1.0;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;4
+peso_vetor_1.0;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+peso_vetor_1.0;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
+peso_vetor_1.0;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+peso_vetor_1.0;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
+peso_vetor_1.0;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;4
+peso_vetor_1.0;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+peso_vetor_1.0;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
+peso_vetor_1.0;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;1
+peso_vetor_1.0;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;6
+peso_vetor_1.0;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;10
+peso_vetor_1.0;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
 peso_vetor_1.5;1;gerada;Onde posso pesquisar online os livros e as teses disponíveis no acervo da UFRJ?;UFRJ pesquisar online livros teses acervo catálogo bibliotecas sistema;1
 peso_vetor_1.5;2;gerada;Vai ter concurso para professor de Engenharia Econômica na Poli?;concurso público professor Engenharia Econômica Escola Politécnica UFRJ edital vaga;4
 peso_vetor_1.5;3;gerada;A parceria da Poli com o Instituto Reditus pode ajudar os alunos de que forma?;parceria Instituto Reditus Escola Politécnica UFRJ benefícios alunos;1
 peso_vetor_1.5;4;gerada;Onde fica o Laboratório de Engenharia de Produção do Entretenimento da Poli?;Laboratório de Engenharia de Produção do Entretenimento localização onde fica Escola Politécnica UFRJ;1
-peso_vetor_1.5;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;
+peso_vetor_1.5;5;gerada;Quem decide se posso passar do mestrado para o doutorado na pós da Poli?;Poli UFRJ passagem transferência mestrado doutorado decisão colegiado programa pós-graduação mudança nível;3
 peso_vetor_1.5;6;gerada;Se uma professora entrar em licença-maternidade, a Poli pode pedir um substituto mesmo fora do prazo normal?;professor substituto licença maternidade contratação fora do prazo edital prazo excepcional Escola Politécnica UFRJ;2
 peso_vetor_1.5;7;gerada;Pra tentar a bolsa do BRAFITEC na chamada emergencial de 2026, quais requisitos eu precisava cumprir?;chamada emergencial BRAFITEC 2026 requisitos bolsa edital;1
 peso_vetor_1.5;8;gerada;Quais professores podem receber o título de Professor Emérito da UFRJ?;UFRJ título Professor Emérito critérios professores podem receber resolução estatuto;2
@@ -303,32 +298,31 @@ peso_vetor_1.5;26;gerada;Como vejo quanto espaço minha conta PoliMail está usa
 peso_vetor_1.5;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;6
 peso_vetor_1.5;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 peso_vetor_1.5;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-peso_vetor_1.5;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;17
-peso_vetor_1.5;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-peso_vetor_1.5;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
-peso_vetor_1.5;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-peso_vetor_1.5;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-peso_vetor_1.5;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-peso_vetor_1.5;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;3
-peso_vetor_1.5;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;6
-peso_vetor_1.5;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;20
-peso_vetor_1.5;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;3
-peso_vetor_1.5;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;5
-peso_vetor_1.5;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;5
-peso_vetor_1.5;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;2
-peso_vetor_1.5;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
-peso_vetor_1.5;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;5
-peso_vetor_1.5;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;3
-peso_vetor_1.5;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
-peso_vetor_1.5;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-peso_vetor_1.5;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
-peso_vetor_1.5;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;5
-peso_vetor_1.5;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-peso_vetor_1.5;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
-peso_vetor_1.5;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;1
-peso_vetor_1.5;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;6
-peso_vetor_1.5;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;20
-peso_vetor_1.5;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+peso_vetor_1.5;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+peso_vetor_1.5;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;1
+peso_vetor_1.5;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;2
+peso_vetor_1.5;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+peso_vetor_1.5;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+peso_vetor_1.5;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;3
+peso_vetor_1.5;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;6
+peso_vetor_1.5;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;13
+peso_vetor_1.5;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;3
+peso_vetor_1.5;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;1
+peso_vetor_1.5;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;11
+peso_vetor_1.5;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;2
+peso_vetor_1.5;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
+peso_vetor_1.5;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;4
+peso_vetor_1.5;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+peso_vetor_1.5;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;1
+peso_vetor_1.5;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+peso_vetor_1.5;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;1
+peso_vetor_1.5;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;5
+peso_vetor_1.5;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+peso_vetor_1.5;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
+peso_vetor_1.5;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;1
+peso_vetor_1.5;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;6
+peso_vetor_1.5;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;12
+peso_vetor_1.5;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
 so_vetor;1;gerada;Onde posso pesquisar online os livros e as teses disponíveis no acervo da UFRJ?;UFRJ pesquisar online livros teses acervo catálogo bibliotecas sistema;1
 so_vetor;2;gerada;Vai ter concurso para professor de Engenharia Econômica na Poli?;concurso público professor Engenharia Econômica Escola Politécnica UFRJ edital vaga;9
 so_vetor;3;gerada;A parceria da Poli com o Instituto Reditus pode ajudar os alunos de que forma?;parceria Instituto Reditus Escola Politécnica UFRJ benefícios alunos;1
@@ -346,7 +340,7 @@ so_vetor;14;gerada;O que é a A3P da Poli?;A3P Escola Politécnica UFRJ o que é
 so_vetor;15;gerada;Na 6ª Feira de Carreira da Poli, rolavam oportunidades de estágio e emprego ou era só palestra?;6ª Feira de Carreira Escola Politécnica UFRJ oportunidades estágio emprego palestras programação;4
 so_vetor;16;gerada;O que a galera da Minerva Aerodesign faz na Poli?;Minerva Aerodesign equipe estudantil o que faz projeto avião competição UFRJ Poli;1
 so_vetor;17;gerada;A Poli oferece desconto nos cursos de especialização ou MBA?;Escola Politécnica UFRJ desconto cursos especialização MBA bolsas desconto pagamento;20
-so_vetor;18;gerada;Sou aluno da Poli e queria participar da PCON-Desastres. O que eu faria no projeto e com quem posso falar?;PCON-Desastres projeto atividades alunos contato responsável Escola Politécnica UFRJ;
+so_vetor;18;gerada;Sou aluno da Poli e queria participar da PCON-Desastres. O que eu faria no projeto e com quem posso falar?;PCON-Desastres projeto atividades alunos contato responsável Escola Politécnica UFRJ;1
 so_vetor;19;gerada;Participar da administração de uma empresa júnior conta como atividade complementar em Engenharia na Poli? Quantas horas posso aproveitar?;Empresa Júnior administração atividade complementar especial horas aproveitamento Engenharia Escola Politécnica UFRJ;4
 so_vetor;20;gerada;Quem coordena o curso de Engenharia Metalúrgica e onde fica a secretaria?;coordenação curso Engenharia Metalúrgica secretaria localização Escola Politécnica UFRJ;1
 so_vetor;21;gerada;Como posso saber quando abrem vagas para entrar na equipe UFRJ Nautilus?;equipe UFRJ Nautilus processo seletivo vagas ingresso equipe;1
@@ -358,29 +352,28 @@ so_vetor;26;gerada;Como vejo quanto espaço minha conta PoliMail está usando e 
 so_vetor;27;gerada;Sou refugiado e quero revalidar meu diploma de graduação na UFRJ. Preciso pagar alguma taxa?;revalidação diploma graduação refugiado taxa pagamento UFRJ gratuidade;1
 so_vetor;28;gerada;Quais são os requisitos mínimos para me candidatar a um intercâmbio pela Poli?;requisitos mínimos candidatura intercâmbio mobilidade internacional alunos graduação Poli UFRJ coeficiente rendimento créditos;1
 so_vetor;29;gerada;Onde fica o CASA da Poli?;CASA Centro de Apoio ao Estudante Escola Politécnica UFRJ localização endereço sala;2
-so_vetor;30;gerada;Se eu for selecionado para duas bolsas de intercâmbio, posso ficar com as duas?;Poli UFRJ acúmulo duas bolsas intercâmbio selecionado bolsas mobilidade internacional acumular;
-so_vetor;31;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
-so_vetor;32;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;3
-so_vetor;33;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;1
-so_vetor;34;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
-so_vetor;35;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
-so_vetor;36;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;16
-so_vetor;37;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;16
-so_vetor;38;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;20
-so_vetor;39;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;5
-so_vetor;40;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;
-so_vetor;41;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;14
-so_vetor;42;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;1
-so_vetor;43;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
-so_vetor;44;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;1
-so_vetor;45;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;5
-so_vetor;46;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;2
-so_vetor;47;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
-so_vetor;48;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;2
-so_vetor;49;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;11
-so_vetor;50;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
-so_vetor;51;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
-so_vetor;52;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;3
-so_vetor;53;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;14
-so_vetor;54;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;3
-so_vetor;55;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
+so_vetor;30;gerada;Como faço backup dos meus e-mails do PoliMail no computador?;PoliMail fazer backup e-mails computador exportar mensagens;1
+so_vetor;31;gerada;Quais são os requisitos para concorrer a uma bolsa de monitoria na Poli?;Escola Politécnica UFRJ requisitos candidatura bolsa monitoria seleção monitor bolsista edital;3
+so_vetor;32;gerada;Quero cancelar minha matrícula na Poli. Para onde envio o pedido e preciso anexar algum documento?;cancelamento de matrícula pedido desligamento voluntário aluno requerimento documentos envio Escola Politécnica UFRJ;5
+so_vetor;33;gerada;O que é o PGD da Poli e como faço para participar?;Poli UFRJ Programa de Gestão e Desempenho PGD participação regras edital;1
+so_vetor;34;gerada;Como disponibilizo um vídeo grande do Google Drive para os alunos na minha disciplina no PoliMoodle?;PoliMoodle disponibilizar vídeo Google Drive alunos disciplina arquivo grande;1
+so_vetor;35;gerada;Se eu passar para o duplo diploma no INSA Toulouse, vou ter que pagar as taxas da universidade francesa? O programa oferece bolsa?;duplo diploma INSA Toulouse taxas matrícula tuition bolsa estudantes UFRJ Escola Politécnica;16
+so_vetor;36;gerada;Voltei de um estágio no exterior. Tenho quanto tempo para entregar o termo de compromisso à Poli? Preciso traduzir?;estágio no exterior prazo entrega termo de compromisso retorno tradução;16
+so_vetor;37;gerada;Posso fazer estágio em tempo integral nas férias?;estágio tempo integral férias limite jornada estudantes UFRJ Escola Politécnica;11
+so_vetor;38;gerada;Como funciona a inscrição para o duplo diploma no IP Paris?;duplo diploma IP Paris inscrição processo seletivo Poli UFRJ;5
+so_vetor;39;gerada;Qual é a pontuação mínima para um professor ser aprovado na avaliação de desempenho para progressão?;pontuação mínima aprovação avaliação de desempenho docente progressão professor Escola Politécnica UFRJ;6
+so_vetor;40;gerada;Quais são os requisitos para eu poder fazer estágio?;requisitos para realizar estágio estudante graduação Escola Politécnica UFRJ matrícula carga horária estágio obrigatório não obrigatório;16
+so_vetor;41;gerada;Na ênfase em Física de Nanotecnologia, posso escolher os 12 créditos de disciplinas complementares de uma área só?;Engenharia Física ênfase Física de Nanotecnologia 12 créditos disciplinas complementares área escolha;1
+so_vetor;42;gerada;Tenho diploma de graduação do exterior e quero pedir a revalidação na UFRJ. Por onde faço a solicitação?;revalidação diploma graduação estrangeiro UFRJ solicitação portal processo PR-1;1
+so_vetor;43;gerada;Quais documentos preciso enviar para me inscrever no Poli pelo Mundo?;Poli pelo Mundo documentos necessários inscrição candidatura edital mobilidade internacional graduação;1
+so_vetor;44;gerada;Se eu trancar a matrícula na Poli, posso continuar no meu estágio?;trancamento de matrícula estágio estudante Poli UFRJ manter estágio vínculo acadêmico;
+so_vetor;45;manual;Quais são os professores do DEL?;DEL Departamento de Engenharia Eletrônica e de Computação lista de professores docentes;2
+so_vetor;46;manual;Como posso me inscrever em matérias?;inscrição em disciplinas matrícula inscrição em matérias graduação Poli UFRJ SIGA prazo procedimento;1
+so_vetor;47;manual;Como faço para trancar uma disciplina?;trancamento de disciplina inscrição em disciplinas cancelamento disciplina graduação Poli UFRJ procedimento prazo;2
+so_vetor;48;manual;Estou com irregularidade na minha inscrição, pois estou com menos de 6 créditos. Como proceder?;Poli UFRJ irregularidade inscrição menos de 6 créditos procedimento inscrição em disciplinas;11
+so_vetor;49;manual;Qual é o procedimento para eu registrar meu estágio?;procedimento registro de estágio graduação Escola Politécnica UFRJ documentação assinatura termo de compromisso;1
+so_vetor;50;manual;Como faço para me inscrever no TCC?;inscrição TCC Trabalho de Conclusão de Curso procedimento matrícula orientador Escola Politécnica UFRJ;
+so_vetor;51;manual;O que leva ao jubilamento na UFRJ?;jubilamento UFRJ causas desligamento estudante resolução graduação;3
+so_vetor;52;manual;Quantas horas de atividades complementares preciso fazer para me formar?;horas exigidas atividades complementares especiais ACE integralização graduação Escola Politécnica UFRJ cursos;14
+so_vetor;53;manual;Quem é o coordenador de ENO?;coordenador curso Engenharia Naval e Oceânica ENO coordenador atual;3
+so_vetor;54;manual;Quem é o chefe do DCC?;chefe atual Departamento de Construção Civil DCC Escola Politécnica UFRJ chefia;1
