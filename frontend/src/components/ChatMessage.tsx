@@ -1,8 +1,7 @@
 import React from 'react';
 import { Message } from '../contexts/ChatContext';
 import { Source } from '../services/api';
-import userAvatar from '../assets/user_avatar.png';
-import assistantAvatar from '../assets/assistant_avatar.png';
+import { User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -21,7 +20,6 @@ const linkCitations = (content: string, sources: Source[] = []): string =>
   });
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
-  const avatar = message.role === 'user' ? userAvatar : assistantAvatar;
   const name = message.role === 'user' ? 'Você' : 'PoliGPT';
   const isWaiting = message.role === 'assistant' && !message.content;
 
@@ -33,9 +31,14 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
         className={`flex max-w-full ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'} items-end`}
       >
         <div className="flex flex-col items-center mx-3">
-          <div className="h-10 w-10 rounded-lg overflow-hidden bg-white/80 dark:bg-gray-200 p-0.5 shadow-sm">
-            <img src={avatar} alt={message.role} className="h-full w-full object-cover" />
-          </div>
+          {/* The assistant uses the PoliGPT icon (public/poligpt_icon.svg), the same one shown in the browser tab */}
+          {message.role === 'user' ? (
+            <div className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-200 shadow-sm">
+              <User className="h-6 w-6" />
+            </div>
+          ) : (
+            <img src="/poligpt_icon.svg" alt="" className="h-10 w-10" />
+          )}
           <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">{name}</span>
         </div>
         <div 
