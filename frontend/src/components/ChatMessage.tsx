@@ -1,8 +1,7 @@
 import React from 'react';
 import { Message } from '../contexts/ChatContext';
 import { Source } from '../services/api';
-import userAvatar from '../assets/user_avatar.png';
-import assistantAvatar from '../assets/assistant_avatar.png';
+import { User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -21,25 +20,29 @@ const linkCitations = (content: string, sources: Source[] = []): string =>
   });
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
-  const avatar = message.role === 'user' ? userAvatar : assistantAvatar;
   const name = message.role === 'user' ? 'Você' : 'PoliGPT';
   const isWaiting = message.role === 'assistant' && !message.content;
 
   return (
     <div 
-      className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fadeIn mb-6`}
+      className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'} animate-fadeIn`}
     >
       <div 
-        className={`flex max-w-full ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'} items-end`}
+        className={`flex max-w-full ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'} items-start`}
       >
-        <div className="flex flex-col items-center mx-3">
-          <div className="h-10 w-10 rounded-lg overflow-hidden bg-white/80 dark:bg-gray-200 p-0.5 shadow-sm">
-            <img src={avatar} alt={message.role} className="h-full w-full object-cover" />
-          </div>
+        <div className="flex flex-col items-center mx-2 sm:mx-3">
+          {/* The assistant uses the PoliGPT icon (public/poligpt_icon.svg), the same one shown in the browser tab */}
+          {message.role === 'user' ? (
+            <div className="h-10 w-10 flex items-center justify-center rounded-full bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-200 shadow-sm">
+              <User className="h-6 w-6" />
+            </div>
+          ) : (
+            <img src="/poligpt_icon.svg" alt="" className="h-10 w-10" />
+          )}
           <span className="text-xs text-gray-500 dark:text-gray-400 mt-1">{name}</span>
         </div>
         <div 
-          className={`rounded-2xl px-5 py-3 ${
+          className={`min-w-0 rounded-2xl px-4 sm:px-5 py-3 ${
             message.role === 'user' 
               ? 'bg-blue-600 dark:bg-blue-700 text-white rounded-tr-none shadow-md' 
               : 'bg-white/80 dark:bg-gray-700 text-gray-700 dark:text-gray-100 rounded-tl-none shadow-md'
@@ -56,26 +59,15 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
             </div>
           ) : message.role === 'assistant' ? (
             <>
+            <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
-                p: (props) => (
-                  <p className="prose prose-sm dark:prose-invert max-w-none" {...props} />
-                ),
                 a: (props) => (
                   <a className="text-blue-600 underline dark:text-blue-400" target="_blank" rel="noopener noreferrer" {...props} />
                 ),
-                ul: (props) => (
-                  <ul className="list-disc pl-6 prose-sm dark:prose-invert" {...props} />
-                ),
-                ol: (props) => (
-                  <ol className="list-decimal pl-6 prose-sm dark:prose-invert" {...props} />
-                ),
-                li: (props) => (
-                  <li className="mb-1" {...props} />
-                ),
                 table: (props) => (
-                  <div className="my-3 overflow-x-auto">
+                  <div className="not-prose my-3 overflow-x-auto">
                     <table className="min-w-full border-collapse text-sm" {...props} />
                   </div>
                 ),
@@ -89,6 +81,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
             >
               {linkCitations(message.content, message.sources)}
             </ReactMarkdown>
+            </div>
             {message.sources && message.sources.length > 0 && (
               <div className="mt-3 pt-2 border-t border-gray-300 dark:border-gray-600 text-sm">
                 <p className="font-semibold mb-1">Fontes</p>

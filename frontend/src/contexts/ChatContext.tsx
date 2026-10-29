@@ -7,6 +7,7 @@ export interface Message {
   content: string;
   status?: string; // what the assistant is doing before the answer starts (e.g. 'searching')
   sources?: Source[]; // documents cited in the answer
+  error?: boolean; // the answer failed and shows an error message instead
 }
 
 export interface Chat {
@@ -21,9 +22,7 @@ interface ChatContextType {
   isLoading: boolean;
   switchChat: (id: string) => void;
   newChat: () => void;
-  appendMessage: (message: Message) => void;
   sendMessage: (content: string) => Promise<void>;
-  clearCurrentChat: () => void;
   currentChat: Chat | undefined;
   deleteChat: (id: string) => void;
 }
@@ -45,9 +44,6 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   // Get the current active chat
   const currentChat = chats.find(chat => chat.id === currentChatId);
 
-  // For compatibility with existing components
-  const messages = currentChat?.messages || [];
-  
   // Initialize with a first chat
   useEffect(() => {
     if (!initialized.current && chats.length === 0) {
@@ -97,7 +93,7 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
         id: currentChatId,
         title: message.role === 'user' 
           ? message.content.slice(0, 20) + (message.content.length > 20 ? '...' : '')
-          : 'Nova Conversa',
+          : 'Nova conversa',
         messages: [message]
       };
       setChats(prevChats => [newChat, ...prevChats]);
@@ -120,26 +116,6 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     }
   };
 
-  const clearCurrentChat = () => {
-    if (pendingChatId.current === currentChatId) {
-      // Se for um chat pendente, apenas volta para o último chat existente
-      const lastChat = chats[0];
-      if (lastChat) {
-        setCurrentChatId(lastChat.id);
-      }
-      pendingChatId.current = null;
-    } else {
-      // Limpa o chat existente
-      setChats(prevChats => 
-        prevChats.map(chat => 
-          chat.id === currentChatId 
-            ? { ...chat, messages: [] } 
-            : chat
-        )
-      );
-    }
-  };
-
   // Updates the last message of a chat (the assistant answer being streamed)
   const updateLastMessage = (chatId: string, update: (message: Message) => Message) => {
     setChats(prevChats =>
@@ -152,10 +128,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
   };
 
   const sendMessage = async (content: string) => {
+    // Only one answer at a time, even if the user switched to another chat
+    if (isLoading) return;
     const chatId = currentChatId;
 
-    // Prepare the chat history in the format expected by the API
-    const chatHistory = currentChat?.messages.map(msg => ({
+    // Prepare the chat history in the format expected by the API, leaving out failed answers and their questions
+    const chatHistory = currentChat?.messages.filter((msg, i, all) => !msg.error && !all[i + 1]?.error).map(msg => ({
       role: msg.role,
       content: msg.content
     })) || [];
@@ -175,11 +153,12 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     } catch (error) {
       console.error('Error sending message:', error);
       const errorMessage = error instanceof AccessDeniedError
-        ? 'Seu código de acesso não é mais válido. Informe um novo código e tente novamente.'
-        : 'Desculpe, ocorreu um erro ao processar sua mensagem. Por favor, tente novamente.';
+        ? 'Seu código de acesso não é mais válido. Informe um novo código e envie a pergunta outra vez.'
+        : 'Não foi possível gerar a resposta agora. Tente novamente em instantes.';
       updateLastMessage(chatId, msg => ({
         ...msg,
         status: undefined,
+        error: true,
         content: msg.content ? `${msg.content}\n\n*${errorMessage}*` : errorMessage
       }));
     } finally {
@@ -194,12 +173,8 @@ export const ChatProvider: React.FC<ChatProviderProps> = ({ children }) => {
     isLoading,
     switchChat,
     newChat,
-    appendMessage,
     sendMessage,
-    clearCurrentChat,
     deleteChat,
-    // For compatibility with existing components
-    messages
   };
 
   return <ChatContext.Provider value={value}>{children}</ChatContext.Provider>;

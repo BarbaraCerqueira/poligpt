@@ -56,13 +56,13 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
   if (hasAccess) return <>{children}</>;
 
   return (
-    <div className="flex flex-col items-center justify-center h-full px-8 text-center bg-gray-200/70 dark:bg-gray-900">
+    <div className="flex flex-col items-center justify-center h-full px-8 text-center">
       <img src={poliLogo} alt="PoliGPT" className="w-48 mb-8" />
       <h1 className="text-3xl font-bold text-gray-700 dark:text-gray-200/70 mb-3">
         Acesso restrito
       </h1>
       <p className="text-gray-600 dark:text-gray-400 max-w-md mb-8">
-        O PoliGPT é um protótipo em avaliação. Informe o código de acesso que você recebeu para continuar.
+        O PoliGPT está em fase de testes. Para continuar, informe o código de acesso que você recebeu.
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-sm">
         <input
