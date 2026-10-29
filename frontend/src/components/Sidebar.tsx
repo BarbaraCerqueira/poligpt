@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
           className="flex items-center w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
         >
           <PlusSquare className="mr-3 h-5 w-5" />
-          <span className="font-medium">Nova Conversa</span>
+          <span className="font-medium">Nova conversa</span>
         </button>
       </div>
       
@@ -49,19 +49,20 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
                 }`}
               >
                 <MessageSquare className="mr-3 h-4 w-4 flex-shrink-0" />
-                <span className={`font-medium truncate ${chat.id === currentChatId ? 'mr-7' : 'group-hover:mr-7'}`}>
+                <span className={`font-medium truncate ${chat.id === currentChatId ? 'mr-7' : 'mr-7 md:mr-0 md:group-hover:mr-7'}`}>
                   {chat.title}
                 </span>
               </button>
+              {/* Touch screens have no hover, so below the md breakpoint the delete button is always visible */}
               <button
-                onClick={(e) => { 
+                onClick={(e) => {
                   e.stopPropagation();
-                  deleteChat(chat.id); 
+                  deleteChat(chat.id);
                 }}
                 className={`absolute right-2 p-1.5 text-gray-500 hover:text-red-500 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full transition-all ${
-                  chat.id === currentChatId 
-                    ? 'opacity-100' 
-                    : 'opacity-0 group-hover:opacity-100'
+                  chat.id === currentChatId
+                    ? 'opacity-100'
+                    : 'opacity-100 md:opacity-0 md:group-hover:opacity-100 focus:opacity-100'
                 }`}
                 title="Excluir conversa"
               >
@@ -74,9 +75,9 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
       
       {/* Information */}
       <div className="border-t border-gray-200 dark:border-gray-700 mt-auto overflow-hidden">
-        <button 
+        <button
           onClick={() => setIsAboutExpanded(!isAboutExpanded)}
-          className="flex items-center justify-between w-full px-4 py-3 text-left transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+          className="flex items-center justify-between w-full px-4 py-3 text-left transition-colors hover:bg-gray-200 dark:hover:bg-gray-700"
         >
           <div className="flex items-center">
             <div className="flex justify-center items-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 mr-3">
@@ -96,11 +97,14 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
             isAboutExpanded ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0 pb-0"
           }`}
         >
-          <div className="p-3 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-750 border border-blue-100 dark:border-gray-700 text-sm">
+          <div className="p-3 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700/50 border border-blue-100 dark:border-gray-700 text-sm">
+            <p className="text-gray-600 dark:text-gray-300 mb-2 leading-relaxed">
+              O PoliGPT responde dúvidas sobre a Escola Politécnica da UFRJ com base no conteúdo público
+              do site da Poli e indica as fontes de cada resposta.
+            </p>
             <p className="text-gray-600 dark:text-gray-300 mb-3 leading-relaxed">
-              O PoliGPT é um assistente virtual criado para auxiliar alunos da Escola Politécnica da Universidade 
-              Federal do Rio de Janeiro em suas dúvidas. Este chatbot foi alimentado com dados obtidos a 
-              partir do website da Escola Politécnica.
+              É um protótipo desenvolvido como Projeto de Graduação e pode errar. Na dúvida, confira as
+              fontes ou procure a secretaria responsável.
             </p>
 
             <a 
@@ -110,7 +114,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
               className="flex items-center justify-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
             >
               <Link2 className="mr-2 h-4 w-4" />
-              Visitar Politécnica	
+              Acessar o site da Poli
             </a>
           </div>
         </div>

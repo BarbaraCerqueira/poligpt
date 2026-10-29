@@ -57,6 +57,8 @@ documentos da Poli e, quando possível, indique onde procurar (por exemplo, a se
 URLs na resposta: as fontes são exibidas separadamente.
 - Considere a data dos documentos: prefira os mais recentes e avise quando a informação puder estar desatualizada, \
 como prazos e calendários de anos anteriores.
+- Quando um procedimento, formulário ou regra valer só para um grupo (por exemplo, ingressantes, um curso ou um \
+período), deixe isso claro e não o apresente como regra geral.
 - Grade horária, turmas oferecidas, professores de cada turma, notas e histórico são informações do SIGA, que não faz \
 parte dos documentos da Poli. Mesmo que encontre algo sobre isso, avise que pode estar desatualizado ou incompleto e \
 indique o SIGA (siga.ufrj.br) como fonte oficial.
