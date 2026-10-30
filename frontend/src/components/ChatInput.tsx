@@ -55,12 +55,12 @@ const ChatInput: React.FC = () => {
           onKeyDown={handleKeyDown}
           placeholder="Pergunte sobre a Poli..."
           rows={1}
-          className="flex-1 py-4 px-4 pr-12 bg-transparent border border-gray-300 dark:border-gray-600 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 resize-none min-h-[56px] max-h-[200px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          className="flex-1 py-4 px-4 pr-12 bg-transparent border border-gray-300 dark:border-gray-600 rounded-2xl focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-navy-400 focus:border-transparent text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 resize-none min-h-[56px] max-h-[200px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         />
         <button
           type="submit"
           disabled={!message.trim() || isLoading}
-          className="absolute right-2 bottom-2 p-2 rounded-xl text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/50 disabled:opacity-50 disabled:hover:bg-transparent transition-colors"
+          className="absolute right-2 bottom-2 p-2 rounded-xl text-navy-700 dark:text-navy-300 hover:bg-navy-100 dark:hover:bg-navy-600/40 disabled:opacity-50 disabled:hover:bg-transparent transition-colors"
         >
           <Send size={24} />
         </button>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MessageSquare, Info, Link2, PlusSquare, Trash2, ChevronDown, ChevronUp } from 'lucide-react';
-import poliLogo from '../assets/poligpt_logo.png';
+import Logo from './Logo';
 import { useChat } from '../hooks/useChat';
 
 interface SidebarProps {
@@ -15,14 +15,14 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
     <div className="flex flex-col h-full overflow-hidden">
       {/* Logo */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-        <img src={poliLogo} alt="PoliGPT" className="mx-auto w-40" />
+        <Logo className="mx-auto w-40" />
       </div>
       
       {/* New Chat Button */}
       <div className="px-4 py-4">
         <button
           onClick={() => { newChat(); onCloseMobile(); }}
-          className="flex items-center w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+          className="flex items-center w-full px-4 py-3 bg-navy-700 hover:bg-navy-800 dark:hover:bg-navy-600 text-white rounded-lg transition-colors"
         >
           <PlusSquare className="mr-3 h-5 w-5" />
           <span className="font-medium">Nova conversa</span>
@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
                 onClick={() => { switchChat(chat.id); onCloseMobile(); }}
                 className={`flex items-center w-full px-4 py-2 rounded-lg transition-colors ${
                   chat.id === currentChatId 
-                    ? 'bg-blue-600/15 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300' 
+                    ? 'bg-navy-600/15 dark:bg-navy-600/40 text-navy-800 dark:text-navy-200' 
                     : 'hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
                 }`}
               >
@@ -80,8 +80,8 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
           className="flex items-center justify-between w-full px-4 py-3 text-left transition-colors hover:bg-gray-200 dark:hover:bg-gray-700"
         >
           <div className="flex items-center">
-            <div className="flex justify-center items-center w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 mr-3">
-              <Info className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+            <div className="flex justify-center items-center w-8 h-8 rounded-full bg-navy-100 dark:bg-navy-600/30 mr-3">
+              <Info className="h-4 w-4 text-navy-700 dark:text-navy-300" />
             </div>
             <span className="font-medium text-gray-900 dark:text-gray-100">Sobre o PoliGPT</span>
           </div>
@@ -97,7 +97,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
             isAboutExpanded ? "max-h-96 opacity-100 pb-4" : "max-h-0 opacity-0 pb-0"
           }`}
         >
-          <div className="p-3 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700/50 border border-blue-100 dark:border-gray-700 text-sm">
+          <div className="p-3 rounded-lg bg-gradient-to-br from-navy-50 to-navy-100 dark:from-gray-800 dark:to-gray-700/50 border border-navy-100 dark:border-gray-700 text-sm">
             <p className="text-gray-600 dark:text-gray-300 mb-2 leading-relaxed">
               O PoliGPT responde dúvidas sobre a Escola Politécnica da UFRJ com base no conteúdo público
               do site da Poli e indica as fontes de cada resposta.
@@ -111,7 +111,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onCloseMobile }) => {
               href="https://www.poli.ufrj.br/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center justify-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
+              className="flex items-center justify-center py-2 px-3 text-sm bg-navy-700 hover:bg-navy-800 dark:hover:bg-navy-600 text-white rounded-md transition-colors"
             >
               <Link2 className="mr-2 h-4 w-4" />
               Acessar o site da Poli
