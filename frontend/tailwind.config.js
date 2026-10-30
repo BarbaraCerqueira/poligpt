@@ -4,17 +4,22 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      // Colors of the PoliGPT logo, based on the Poli/UFRJ logos: navy 700 is the "Poli" and gold 500 the gear
       colors: {
-        blue: {
-          100: '#E6F0FF',
-          200: '#CCE0FF',
-          300: '#99C0FF',
-          400: '#66A0FF',
-          500: '#3380FF',
-          600: '#0055CC',
-          700: '#004099',
-          800: '#002B66',
-          900: '#001533',
+        navy: {
+          50: '#EEF2FA',
+          100: '#DCE3F4',
+          200: '#BAC7EA',
+          300: '#9DB0E2',
+          400: '#6B86CF',
+          500: '#4766B8',
+          600: '#2C4793',
+          700: '#1A2D6D',
+          800: '#132256',
+          900: '#0D173B',
+        },
+        gold: {
+          500: '#FCB400',
         },
       },
       animation: {

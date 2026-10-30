@@ -1,5 +1,5 @@
 import React, { useState, useEffect, FormEvent, ReactNode } from 'react';
-import poliLogo from '../assets/poligpt_logo.png';
+import Logo from './Logo';
 import {
   ACCESS_DENIED_EVENT,
   captureAccessCodeFromUrl,
@@ -57,7 +57,7 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
 
   return (
     <div className="flex flex-col items-center justify-center h-full px-8 text-center">
-      <img src={poliLogo} alt="PoliGPT" className="w-48 mb-8" />
+      <Logo className="w-48 mb-8" />
       <h1 className="text-3xl font-bold text-gray-700 dark:text-gray-200/70 mb-3">
         Acesso restrito
       </h1>
@@ -72,12 +72,12 @@ const AccessGate: React.FC<AccessGateProps> = ({ children }) => {
           placeholder="Código de acesso"
           autoComplete="off"
           autoFocus
-          className="py-3 px-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
+          className="py-3 px-4 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-2xl focus:outline-none focus:ring-2 focus:ring-navy-500 dark:focus:ring-navy-400 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"
         />
         <button
           type="submit"
           disabled={!code.trim() || isChecking}
-          className="py-3 rounded-2xl bg-blue-600 dark:bg-blue-500 text-white font-medium hover:bg-blue-700 dark:hover:bg-blue-600 disabled:opacity-50 transition-colors"
+          className="py-3 rounded-2xl bg-navy-700 text-white font-medium hover:bg-navy-800 dark:hover:bg-navy-600 disabled:opacity-50 transition-colors"
         >
           {isChecking ? 'Verificando...' : 'Entrar'}
         </button>

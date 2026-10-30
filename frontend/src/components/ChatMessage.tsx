@@ -44,16 +44,16 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
         <div 
           className={`min-w-0 rounded-2xl px-4 sm:px-5 py-3 ${
             message.role === 'user' 
-              ? 'bg-blue-600 dark:bg-blue-700 text-white rounded-tr-none shadow-md' 
+              ? 'bg-navy-700 text-white rounded-tr-none shadow-md' 
               : 'bg-white/80 dark:bg-gray-700 text-gray-700 dark:text-gray-100 rounded-tl-none shadow-md'
           }`}
         >
           {isWaiting ? (
             <div className="flex items-center gap-2 py-1 text-sm text-gray-500 dark:text-gray-300">
               <div className="animate-pulse flex space-x-1">
-                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
-                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
-                <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
+                <div className="h-2 w-2 bg-gold-500 rounded-full"></div>
+                <div className="h-2 w-2 bg-gold-500 rounded-full"></div>
+                <div className="h-2 w-2 bg-gold-500 rounded-full"></div>
               </div>
               {message.status === 'searching' && <span>Buscando nos documentos da Poli...</span>}
             </div>
@@ -64,7 +64,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               remarkPlugins={[remarkGfm]}
               components={{
                 a: (props) => (
-                  <a className="text-blue-600 underline dark:text-blue-400" target="_blank" rel="noopener noreferrer" {...props} />
+                  <a className="text-navy-600 underline dark:text-navy-300" target="_blank" rel="noopener noreferrer" {...props} />
                 ),
                 table: (props) => (
                   <div className="not-prose my-3 overflow-x-auto">
@@ -90,7 +90,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
                     <li key={source.id}>
                       [{index + 1}]{' '}
                       {source.url ? (
-                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline dark:text-blue-400">
+                        <a href={source.url} target="_blank" rel="noopener noreferrer" className="text-navy-600 underline dark:text-navy-300">
                           {source.title}
                         </a>
                       ) : source.title}

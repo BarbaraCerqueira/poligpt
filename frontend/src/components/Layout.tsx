@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <img src="/poligpt_icon.svg" alt="" className="md:hidden h-7 w-7" />
           <span className="md:hidden font-semibold text-gray-800 dark:text-gray-100">PoliGPT</span>
           <button
-            className="ml-auto p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-amber-400 hover:bg-gray-300 dark:hover:bg-gray-600 shadow-sm transition-colors"
+            className="ml-auto p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gold-500 hover:bg-gray-300 dark:hover:bg-gray-600 shadow-sm transition-colors"
             onClick={toggleTheme}
             aria-label={darkMode ? 'Usar tema claro' : 'Usar tema escuro'}
             title={darkMode ? 'Tema claro' : 'Tema escuro'}

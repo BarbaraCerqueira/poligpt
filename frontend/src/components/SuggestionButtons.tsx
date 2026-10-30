@@ -30,7 +30,7 @@ const SuggestionButtons: React.FC<SuggestionButtonsProps> = ({ suggestions }) =>
           disabled={isLoading}
           className="flex items-center gap-4 px-6 py-4 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl text-left transition-all duration-200 group disabled:opacity-50 disabled:pointer-events-none"
         >
-          <div className="text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <div className="text-gray-500 dark:text-gray-400 group-hover:text-navy-700 dark:group-hover:text-gold-500 transition-colors">
             {icons[index]}
           </div>
           <span className="text-sm text-gray-700 dark:text-gray-300">
