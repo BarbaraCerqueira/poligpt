@@ -114,11 +114,11 @@ df_pdf = (
     .filter(~(col("content").contains("ATA — ESCOLA POLITÉCNICA")))
     .filter(~(col("file_path").contains("congregacao-da-politecnica_pautas_")))
 
-    # Desconsiderar arquivos sobre concursos da Politécnica
-    .filter(~(col("file_path").contains("poli_ufrj_br_concurso")))
+    # Desconsiderar arquivos dos concursos para docentes, exceto editais e cronogramas
+    # (os demais são provas manuscritas digitalizadas e listas com nomes e notas dos candidatos)
+    .filter(~(col("file_path").contains("poli_ufrj_br_concurso")) | col("file_path").rlike("(?i)edital|cronograma"))
 
-    # Desconsiderar arquivos de formulários e autodeclarações
-    .filter(~(col("file_path").rlike("(?i)formulario")))
+    # Desconsiderar autodeclarações
     .filter(~((col("file_path").rlike("(?i)declaracao")) & col("content").rlike("(?i)declaro")))
 
     # Ajustes estruturais
