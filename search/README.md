@@ -62,6 +62,6 @@ O plano Free permite 50 MB de armazenamento e 3 índices. Para caber nesse limit
 - **Quantização escalar (int8):** o índice vetorial (HNSW) guarda cada dimensão em 1 byte em vez de 4. Os vetores originais são preservados e usados para reordenar os candidatos (*rescoring*, com 4x de *oversampling*), mantendo a qualidade da busca.
 - **`stored=False`:** não guarda uma cópia do vetor para devolver nas consultas, já que a aplicação nunca lê o vetor.
 
-Com 2.564 trechos, essas opções reduziram o índice vetorial de 46,6 MB para 7,9 MB e o total de 59,9 MB para 40,4 MB (out/2026).
+Sem essas opções, o índice ultrapassava o limite do plano Free; com elas, o índice vetorial fica bem menor e o tamanho total fica abaixo do limite.
 
 > Alterações na configuração de vetores exigem recriar o índice: apagar `poligpt-index`, rodar `create_vector_index.py`, resetar o indexador (`POST /indexers/poligpt-indexer/reset`) e executá-lo de novo. O indexador reprocessa tudo a partir do Azure SQL, sem precisar rodar o pipeline do Databricks.
